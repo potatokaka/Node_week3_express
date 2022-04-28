@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "6ec42a3b-9e2c-4f4a-bf08-39e94921d144",
+		"name": "Node-Week3_express-heroku_postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有 posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hexwall-week3.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"hexwall-week3",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fake Name\",\n    \"content\": \"abc test\",\n    \"type\": \"fan\",\n    \"tags\": \"meme\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week3.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"hexwall-week3",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有 posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://hexwall-week3.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"hexwall-week3",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆 post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://hexwall-week3.herokuapp.com/api/posts/:id",
+					"protocol": "https",
+					"host": [
+						"hexwall-week3",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "626aaa3d6f94adeaac55dfbe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆 post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fake Name2\",\n    \"content\": \"abc test 123\",\n    \"type\": \"group\",\n    \"tags\": \"meme\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week3.herokuapp.com/api/posts/:id",
+					"protocol": "https",
+					"host": [
+						"hexwall-week3",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "626aaa8a6f94adeaac55dfc5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
